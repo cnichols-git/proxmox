@@ -1,0 +1,5 @@
+   qm set 999 --serial0 socket --vga serial0
+   mv ubuntu-24.04-minimal-cloudimg-amd64.img ubuntu-2401-template.qcow2
+   qemu-img resize ubuntu-2401-template.qcow2 32G
+   qm importdisk 999 ubuntu-2401-template.qcow2 local-vm
+   qm importdisk 999 ubuntu-2401-template.qcow2 local-lvm
